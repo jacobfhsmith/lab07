@@ -1,0 +1,72 @@
+---
+title: 'Lab 07: CLT-based inference'
+author: ''
+date: ''
+output:
+  html_document:
+    df_print: paged
+  pdf_document: default
+editor_options:
+  chunk_output_type: console
+subtitle: 'Due: Sat, Mar 20 at 11:59pm ET'
+---
+
+```{r include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, eval = FALSE, message = FALSE, 
+                      warning = FALSE, results = 'hide',
+                      comment = "#>", highlight = TRUE)
+```
+
+# Packages
+
+```{r load_packages}
+library(tidyverse)
+library(infer)
+``` 
+
+## Data
+
+"This data set represents thousands of loans made through the Lending Club 
+platform, which is a platform that allows individuals to lend to other 
+individuals. Of course, not all loans are created equal. Someone who is 
+essentially a sure bet to pay back a loan will have an easier time getting a 
+loan with a low interest rate than someone who appears to be riskier. And for 
+people who are very risky? They may not even get a loan offer, or they may not have accepted the loan offer due to a high interest rate. It is important to 
+keep that last part in mind, since this data set only represents loans actually made, i.e. do not mistake this data for loan applications!"
+
+More information about the data can be found at
+https://www.openintro.org/data/index.php?data=loans_full_schema
+
+```{r echo=TRUE}
+loans <- read_rds("~/lending_club_loans.rds")
+```
+
+Most of the variables are self explanatory and we'll only need to work with
+a subset of them. When doing inference procedures, `select()` the variables of
+interest to make the data more manageable.
+
+## General instructions
+
+- Write all R code according to the style guidelines discussed in class. 
+  Be especially careful about staying within the 80 character limit.
+
+- Use `tidyverse` and/or `infer` functions when applicable. However, you 
+  may use the formulas directly rather than `t_test()` and `prop_test()`.
+  
+- All inference should be done using the CLT-based approach.
+
+# Exercises
+
+## Exercise 1
+
+```{r ex_1}
+```
+
+
+## References
+
+"Data Sets". Openintro.Org, 2021, https://www.openintro.org/data/index.php?data=loans_full_schema. 
+Accessed 13 Mar 2021.
+
+"Infer - Tidy Statistical Inference". Infer.Netlify.App, 2021, 
+https://infer.netlify.app/index.html.
